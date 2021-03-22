@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10.0dip"
+            app:srcCompat="@drawable/ic_rate_star" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35.0dip"
+            android:gravity="center"
+            android:text="@string/rate_app"
+            android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16.0dip"
+            android:layout_marginEnd="30dp"
+            android:gravity="center"
+            android:text="@string/rate_app_dis"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RatingBar
+                android:id="@+id/rb_stars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="1"
+
+                android:theme="@style/AppRatingBar" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_later"
+            android:layout_width="match_parent"
+            android:layout_height="35.0dip"
+            android:layout_marginStart="48.0dip"
+            android:layout_marginTop="9.0dip"
+            android:layout_marginEnd="48.0dip"
+            android:background="@drawable/rate_rounded"
+            android:foreground="?android:selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/rate_new"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/bt_never"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="@string/rating_dialog_maybe_later"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

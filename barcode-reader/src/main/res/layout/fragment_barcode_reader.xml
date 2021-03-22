@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="?android:attr/actionBarItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_title"
+            app:srcCompat="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/StyleBody1"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="@string/scan_qr"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_flash"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_camera_rotate"
+            app:layout_constraintEnd_toStartOf="@+id/iv_gallery"
+            app:layout_constraintTop_toTopOf="@+id/iv_camera_rotate"
+            app:srcCompat="@drawable/ic_flash_off" />
+
+        <ImageView
+            android:id="@+id/iv_gallery"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_camera_rotate"
+            app:layout_constraintEnd_toStartOf="@+id/iv_camera_rotate"
+            app:layout_constraintTop_toTopOf="@+id/iv_camera_rotate"
+            app:srcCompat="@drawable/ic_gallery" />
+
+        <ImageView
+            android:id="@+id/iv_camera_rotate"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_title"
+            app:srcCompat="@drawable/ic_rotate_camera" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        style="@style/CardViewStyle"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@+id/slider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.scan.barcode.camera.CameraSourcePreview
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.scan.barcode.camera.GraphicOverlay
+                android:id="@+id/graphicOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:line_speed="6"
+                app:line_width="4" />
+        </com.scan.barcode.camera.CameraSourcePreview>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/tvZoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="@string/zoom"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/slider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/slider" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:stepSize="10"
+        android:valueFrom="0.0"
+        android:valueTo="100.0"
+        app:haloColor="@color/colorPrimary"
+        app:labelBehavior="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvZoom"
+        app:thumbColor="@color/colorPrimary"
+        app:trackColor="@color/colorPrimary"
+        app:trackHeight="@dimen/_1sdp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

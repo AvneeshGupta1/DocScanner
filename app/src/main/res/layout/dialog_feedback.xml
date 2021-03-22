@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10.0dip"
+            app:srcCompat="@drawable/ic_rate_feedback" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25.0dip"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/feedback"
+            android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rate_background"
+            android:gravity="top"
+            android:hint="@string/write_your_feedback_here"
+            android:inputType="textCapSentences|textMultiLine"
+            android:lines="4"
+            android:minHeight="90dp"
+            android:padding="10dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+        <Button
+            android:id="@+id/bt_send"
+            android:layout_width="match_parent"
+            android:layout_height="35.0dip"
+            android:layout_marginStart="48.0dip"
+            android:layout_marginTop="9.0dip"
+            android:layout_marginEnd="48.0dip"
+            android:background="@drawable/rate_rounded"
+            android:foreground="?android:selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/send"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/bt_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="@string/rating_dialog_maybe_later"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

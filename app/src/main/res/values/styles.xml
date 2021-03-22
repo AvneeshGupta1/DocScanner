@@ -1,0 +1,115 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_arrow_back</item>
+        <item name="android:windowBackground">@color/windowBackground_light</item>
+        <item name="titleToolbarTextColor">@color/mb_white</item>
+        <item name="iconTintOnCard">@color/colorPrimary</item>
+        <item name="historyIconColor">@color/colorPrimary</item>
+        <item name="customDividerColor">@color/black</item>
+        <item name="navigationIconTint">@color/colorGray</item>
+        <item name="bottomSheetColor">?attr/colorPrimary</item>
+        <item name="bottomSheetTextColor">@color/mb_white</item>
+        <item name="bannerBackgroundColor">@color/colorAccent</item>
+        <item name="similarBgColor">@color/mb_white</item>
+        <item name="bottomSheetBgColor">@color/windowBackground_light</item>
+        <item name="lockIconTintColor">@color/black</item>
+        <item name="actionMenuTextColor">@color/mb_white</item>
+        <item name="searchFileRaw">@raw/search_file_dark</item>
+        <item name="android:actionMenuTextColor">@color/mb_white</item>
+
+        <!-- Navigation Drawer -->
+        <item name="colorNavigationItemSelected">@color/white</item>
+        <item name="drawableNavigationItemBackground">@drawable/menu_background_color_state</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="Widget.Custom.NavigationView" parent="Widget.Design.NavigationView">
+        <item name="itemIconTint">@color/colorPrimary</item>
+        <item name="itemTextColor">@color/colorPrimary</item>
+        <item name="itemBackground">?attr/drawableNavigationItemBackground</item>
+    </style>
+
+    <style name="parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <!--list item body1 main items size,tab-->
+    <style name="StyleBody1" parent="parent">
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@string/roboto_regular</item>
+    </style>
+
+    <!--list item body2 2nd item-->
+
+    <!--list item body2-->
+
+    <!--menu item,drawer menu navigation, list item menu like in settings -->
+
+
+    <!--page title like toolbar-->
+
+
+    <!--use as body text-->
+
+    <style name="StyleTextView" parent="parent">
+        <item name="android:textSize">@dimen/_14sdp</item>
+    </style>
+
+
+    <style name="StyleTextView.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="MorphingButton">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="CardViewStyle" parent="CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardCornerRadius">5dp</item>
+        <item name="cardElevation">5dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/_16sdp</item>
+    </style>
+
+    <style name="ToolbarSubtitleAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">@dimen/_14sdp</item>
+    </style>
+
+    <style name="AppToolbar" parent="parent">
+        <item name="android:minHeight">@dimen/_45sdp</item>
+        <item name="titleTextAppearance">@style/Toolbar.TitleText</item>
+        <item name="subtitleTextAppearance">@style/ToolbarSubtitleAppearance</item>
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="popupTheme">@style/AppTheme.PopupOverlay</item>
+    </style>
+
+
+    <style name="AppRatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/rate_normal_color</item>
+        <item name="colorControlActivated">@color/rate_active_color</item>
+        <item name="colorControlHighlight">@android:color/transparent</item>
+    </style>
+
+</resources>

@@ -1,0 +1,16 @@
+<resources>
+
+    <dimen name="activity_horizontal_margin">24dp</dimen>
+    <dimen name="activity_vertical_margin">24dp</dimen>
+
+    <dimen name="text_size_18">20sp</dimen>
+
+    <dimen name="margin_5">6dp</dimen>
+    <dimen name="margin_8">10dp</dimen>
+    <dimen name="margin_10">12dp</dimen>
+    <dimen name="margin_16">18dp</dimen>
+    <dimen name="margin_56">58dp</dimen>
+    <dimen name="margin_60">62dp</dimen>
+    <dimen name="margin_70">72dp</dimen>
+    <dimen name="margin_80">84dp</dimen>
+</resources>

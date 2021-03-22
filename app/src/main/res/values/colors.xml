@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#23BE9E</color>
+    <color name="colorPrimaryDark">#05A088</color>
+    <color name="colorAccent">#23BE9E</color>
+    <color name="colorPlate">#FF5722</color>
+    <color name="colorOnPrimary">#d3d3d3</color>
+    <color name="dark_purple">#690339</color>
+    <color name="windowBackground_light">#F4F4F6</color>
+    <color name="themeColor">#11CFC5</color>
+    <color name="icon_color">#23BE9E</color>
+    <color name="text_header">#e6700e</color>
+    <color name="colorGray">#607D8B</color>
+    <color name="red">#FF0000</color>
+    <color name="light_gray">#d3d3d3</color>
+    <color name="red_600">#EF5243</color>
+    <color name="screen_bg">#EEEEEE</color>
+    <color name="white">#FFFFFF</color>
+    <color name="default_text_color">#757575</color>
+    <color name="login_button_bg_color">#00ADC1</color>
+    <color name="bottomSheetBgColor">#F4F4F6</color>
+    <color name="rate_active_color">#edbd31</color>
+    <color name="rate_normal_color">#959595</color>
+
+</resources>

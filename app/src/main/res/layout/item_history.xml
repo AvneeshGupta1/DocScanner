@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.extrastudios.docscanner.database.entity.History" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:minHeight="@dimen/_45sdp">
+
+        <ImageView
+            android:id="@+id/operationImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/default_content_description"
+            android:src="@{item.icon}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ic_compress_image" />
+
+        <TextView
+            android:id="@+id/fileName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:padding="12dp"
+            android:text="@{item.name}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/operationDate"
+            app:layout_constraintStart_toEndOf="@+id/operationImage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="This is file name" />
+
+        <TextView
+            android:id="@+id/operationDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_6sdp"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingRight="@dimen/_6sdp"
+            android:text="@{item.formatedDate}"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@+id/operationType"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Wed, Dec 09 at 13:28" />
+
+        <TextView
+            android:id="@+id/operationType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_6sdp"
+            android:text="@{item.operationText}"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/operationDate"
+            app:layout_constraintTop_toBottomOf="@+id/operationDate"
+            tools:text="Created" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

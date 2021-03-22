@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyCardView">
+        <attr name="option_text" format="string" />
+        <attr name="option_icon" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CTAppTheme">
+        <attr name="titleToolbarTextColor" format="color" />
+        <attr name="iconTintOnCard" format="color" />
+        <attr name="historyIconColor" format="color" />
+        <attr name="customDividerColor" format="color" />
+        <attr name="navigationIconTint" format="color" />
+        <attr name="bottomSheetColor" format="color" />
+        <attr name="bottomSheetTextColor" format="color" />
+        <attr name="bannerBackgroundColor" format="color" />
+        <attr name="similarBgColor" format="color" />
+        <attr name="bottomSheetBgColor" format="color" />
+        <attr name="lockIconTintColor" format="color" />
+        <attr name="searchFileRaw" format="reference" />
+    </declare-styleable>
+
+    <attr name="colorNavigationItem" format="color" />
+    <attr name="colorNavigationItemSelected" format="color" />
+    <attr name="drawableNavigationItemBackground" format="reference" />
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+</resources>

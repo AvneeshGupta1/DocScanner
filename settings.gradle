@@ -1,0 +1,3 @@
+include ':capture_lib'
+include ':barcode-reader'
+include ':app'

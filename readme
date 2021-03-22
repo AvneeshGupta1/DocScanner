@@ -1,1 +1,44 @@
-Before adding vector drawable wrap all drawable to selector
+# Doc Scanner
+
+Scan Document and Convert to PDF
+
+## Key features:
+
+* Create PDF from multiple images from camera or gallery
+* View your converted PDFs
+* Open, Rename, Delete, print, share files
+* Sort the files order based on a number of options
+* View File details (Path, size, date created ...)
+* Encrypt PDF
+* Decrypt PDF
+* Rotate Pages
+* Different themes
+* Merge existing PDFs
+* Split existing PDFs
+* Convert text file to PDFs
+* Compress existing PDF
+* Remove pages from a PDF
+* Rearrange pages of a PDF
+* Extract images from PDF
+* History : View all the PDF related conversions
+
+#Contributing
+
+## Dependencies
+
+Folderpicker
+Image-cropper
+iTextG
+Lottie
+Matisse
+Material Dialogs
+Material Ripple
+Morphing Button
+Picasso
+Picasso-transformations
+PhotoEditor
+viewpager-transformers
+zxing
+
+#Code & Issues
+If you are a developer and you wish to contribute to the app please fork the project and submit a pull request. Follow Github Flow for collaboration! If you have any questions, feel free to ask me about whatever you want. Here is the list of known issues.

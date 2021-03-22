@@ -183,4 +183,4 @@ dependencies {
     //for crash report
     implementation 'com.github.AvneeshGupta1:CrashNotes:1.0.2'
 }
-//apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.gms.google-services'

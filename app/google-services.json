@@ -1,0 +1,58 @@
+{
+  "project_info": {
+    "project_number": "166125826120",
+    "firebase_url": "https://admob-app-id-9180243930.firebaseio.com",
+    "project_id": "admob-app-id-9180243930",
+    "storage_bucket": "admob-app-id-9180243930.appspot.com"
+  },
+  "client": [
+
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166125826120:android:59cdaab48bb65e9b45a87d",
+        "android_client_info": {
+          "package_name": "com.extrastudios.camscanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "166125826120-dd87d36v416e3gb92e766k7d5bqb77fk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.extrastudios.camscanner",
+            "certificate_hash": "a82a66ed7d8df0998ec3dba8d5eafd121f1195ea"
+          }
+        },
+        {
+          "client_id": "166125826120-od9ft2qv9d1f6iclf6t026vmbgcdrdev.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.extrastudios.camscanner",
+            "certificate_hash": "9a478a953aad00b3f6a170f318c0538f920286b4"
+          }
+        },
+        {
+          "client_id": "166125826120-tln0jsoofno40mg98urb0d0v737oifqu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIscaEsqyeYLfsZR8q-UXqYlIcFCt96nU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "166125826120-tln0jsoofno40mg98urb0d0v737oifqu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-6249125568831767~4746073416"
+    }
+  ],
+  "configuration_version": "1"
+}

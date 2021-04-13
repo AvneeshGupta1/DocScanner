@@ -5,7 +5,6 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Color
 import android.widget.LinearLayout
-import android.widget.RelativeLayout
 import com.extrastudios.docscanner.BuildConfig
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
@@ -38,22 +37,7 @@ fun showBannerAd(mAdView: AdView, view: LinearLayout?, activity: Context) {
 
         override fun onAdFailedToLoad(errorCode: Int) {
             view.removeView(mAdView)
-            view.show()
-
-            //this was for Facebook
-            val fbAdView = com.facebook.ads.AdView(
-                activity,
-                FB_BANNER_ADS,
-                com.facebook.ads.AdSize.BANNER_HEIGHT_50
-            )
-            val bannerParameters = RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.WRAP_CONTENT,
-                RelativeLayout.LayoutParams.WRAP_CONTENT
-            )
-            bannerParameters.addRule(RelativeLayout.CENTER_HORIZONTAL)
-            bannerParameters.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM)
-            view.addView(fbAdView, bannerParameters)
-            fbAdView.loadAd()
+            view.hide()
         }
     }
 }

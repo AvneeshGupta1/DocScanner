@@ -23,7 +23,7 @@ class ImagesPreviewActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val intent = intent
-        val mImagesArrayList = intent.getStringArrayListExtra(PREVIEW_IMAGES)
+        val mImagesArrayList = intent.getStringArrayListExtra(PREVIEW_IMAGES)?:ArrayList()
         val mViewPager = findViewById<ViewPager>(R.id.viewpager)
         val mPreviewAdapter = PreviewAdapter(this, mImagesArrayList)
         mViewPager.adapter = mPreviewAdapter

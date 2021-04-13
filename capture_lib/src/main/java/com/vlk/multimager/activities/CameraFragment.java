@@ -15,9 +15,12 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.hardware.Camera;
 import android.hardware.SensorManager;
+import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -39,6 +42,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.core.content.FileProvider;
 import androidx.legacy.app.FragmentCompat;
 
 import com.squareup.picasso.Callback;
@@ -677,15 +681,23 @@ public class CameraFragment extends Fragment implements View.OnClickListener {
     }
 
     protected File getOutputMediaFile() {
+        String pictureDic = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).toString();
         String timeStamp = new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date());
-        ContentValues values = new ContentValues();
-        values.put(MediaStore.Images.Media.TITLE, timeStamp + ".jpg");
-        fileUri = getActivity().getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
-        Log.e("File Uri Path", "Uri inserted into media store = " + fileUri);
-//        Toast.makeText(getActivity(), "File uri = "+fileUri, Toast.LENGTH_LONG).show();
-        String path = getImageRealPathFromURI(fileUri);
-        File file = new File(path);
+        File file = new File(pictureDic, timeStamp + ".jpg");
+
+        fileUri = getUriFromFile(file);
+        String[] pathList = new String[]{file.getPath()};
+        MediaScannerConnection.scanFile(getActivity().getApplicationContext(), pathList, null, null);
         return file;
+    }
+
+
+    private Uri getUriFromFile(File file) {
+        if (Build.VERSION.SDK_INT < 24) {
+            return Uri.fromFile(file);
+        } else {
+            return FileProvider.getUriForFile(getActivity(), getActivity().getPackageName()+".provider", file);
+        }
     }
 
     private void handleZoom(MotionEvent event, Camera.Parameters params) {
@@ -789,7 +801,7 @@ public class CameraFragment extends Fragment implements View.OnClickListener {
         protected void onPostExecute(File file) {
             super.onPostExecute(file);
             if (file != null) {
-                Image image = new Image(ContentUris.parseId(fileUri), fileUri, file.getPath(),
+                Image image = new Image(0, fileUri, file.getPath(),
                         (pictureRotation == 90 || pictureRotation == 270));
                 selectedImages.add(image);
                 showCameraLayout(false);

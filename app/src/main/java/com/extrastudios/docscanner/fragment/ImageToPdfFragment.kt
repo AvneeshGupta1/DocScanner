@@ -261,7 +261,7 @@ class ImageToPdfFragment : BaseFragments(), View.OnClickListener, OnPDFCreatedIn
             }
             applyFilterCode -> {
                 mImagesUri.clear()
-                val mFilterUris: ArrayList<String> = data.getStringArrayListExtra(RESULT)
+                val mFilterUris: ArrayList<String> = data.getStringArrayListExtra(RESULT)?:ArrayList()
                 val size: Int = mFilterUris.size - 1
                 for (k in 0..size) mImagesUri.add(mFilterUris[k])
             }
@@ -276,7 +276,7 @@ class ImageToPdfFragment : BaseFragments(), View.OnClickListener, OnPDFCreatedIn
                 }
             }
             previewImageCode -> {
-                mImagesUri = data.getStringArrayListExtra(RESULT)
+                mImagesUri = data.getStringArrayListExtra(RESULT)?:ArrayList()
                 if (mImagesUri.size > 0) {
                     tvNoOfImages.text = String.format(
                         resources.getString(R.string.images_selected),
@@ -288,7 +288,7 @@ class ImageToPdfFragment : BaseFragments(), View.OnClickListener, OnPDFCreatedIn
                 }
             }
             rearrangeImageCode -> {
-                mImagesUri = data.getStringArrayListExtra(RESULT)
+                mImagesUri = data.getStringArrayListExtra(RESULT)?:ArrayList()
                 if (mImagesUri.size > 0) {
                     tvNoOfImages.text = String.format(
                         resources.getString(R.string.images_selected),

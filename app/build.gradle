@@ -85,21 +85,18 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
     // Add the Firebase Crashlytics SDK.
-    implementation 'com.google.firebase:firebase-analytics-ktx:18.0.2'
-    implementation 'com.google.firebase:firebase-crashlytics:17.4.0'
+    implementation 'com.google.firebase:firebase-analytics-ktx:18.0.3'
+    implementation 'com.google.firebase:firebase-crashlytics:17.4.1'
 
     //Dagger do not change this
-    implementation 'com.google.dagger:dagger:2.33'
-    kapt 'com.google.dagger:dagger-compiler:2.33'
-
-    //facebook ads
-    implementation 'com.facebook.android:audience-network-sdk:6.2.0'
+    implementation 'com.google.dagger:dagger:2.34'
+    kapt 'com.google.dagger:dagger-compiler:2.34'
 
     implementation "com.google.firebase:firebase-ads:19.8.0"
 
     // Architecture components
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    kapt 'androidx.lifecycle:lifecycle-common-java8:2.3.0'
+    kapt 'androidx.lifecycle:lifecycle-common-java8:2.3.1'
 
     //for update popup
     implementation 'com.google.android.play:core:1.10.0'
@@ -126,8 +123,8 @@ dependencies {
     implementation 'com.google.android.gms:play-services-vision:20.1.3'
 
     // Room database
-    implementation 'androidx.room:room-runtime:2.3.0-beta03'
-    kapt 'androidx.room:room-compiler:2.3.0-beta03'
+    implementation 'androidx.room:room-runtime:2.3.0-rc01'
+    kapt 'androidx.room:room-compiler:2.3.0-rc01'
 
     // Itext pdf library
     implementation 'com.itextpdf:itextg:5.5.10'
@@ -136,7 +133,7 @@ dependencies {
     // material ripple, morphing button, material dialog, animations
     implementation 'com.github.dmytrodanylyk:android-morphing-button:98a4986e56'
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
-    implementation 'com.airbnb.android:lottie:3.6.1'
+    implementation 'com.airbnb.android:lottie:3.7.0'
 
     // anko for fast development
     implementation 'org.jetbrains.anko:anko-common:0.9'

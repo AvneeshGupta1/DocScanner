@@ -61,7 +61,7 @@ class ImageEditor : BaseActivity(), View.OnClickListener {
 
 
     private fun initValues() {
-        mFilterUris = intent.getStringArrayListExtra(IMAGE_EDITOR_KEY)
+        mFilterUris = intent.getStringArrayListExtra(IMAGE_EDITOR_KEY)?:ArrayList()
         mDisplaySize = mFilterUris.size
         val viewModel = ViewModelProvider(this).get(ImageToPdfViewModel::class.java)
         mFilterItems = viewModel.getFilterItemsList(this)

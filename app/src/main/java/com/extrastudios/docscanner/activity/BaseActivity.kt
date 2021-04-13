@@ -15,10 +15,6 @@ import com.extrastudios.docscanner.DocScannerApplication
 import com.extrastudios.docscanner.R
 import com.extrastudios.docscanner.dagger.PreferencesService
 import com.extrastudios.docscanner.utils.*
-import com.facebook.ads.Ad
-import com.facebook.ads.AdError
-import com.facebook.ads.InterstitialAd
-import com.facebook.ads.InterstitialAdListener
 import com.google.android.gms.ads.*
 import com.google.android.play.core.appupdate.AppUpdateManager
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory
@@ -40,9 +36,7 @@ abstract class BaseActivity : AppCompatActivity() {
     var doubleBackToExitPressedOnce = false
     var mLastClickTime: Long = 0
     private  var mInterstitial: com.google.android.gms.ads.InterstitialAd?=null
-    private var fbInterstitialAd: InterstitialAd? = null
     private var isGoogleAdLoaded: Boolean = false
-    private var isFBAdLoaded: Boolean = false
     var isNativeAdsLoaded: Boolean = false
     private var mAdView: AdView? = null
 
@@ -162,8 +156,6 @@ abstract class BaseActivity : AppCompatActivity() {
         if (BuildConfig.DEBUG || !BuildConfig.FREE_VERSION) {
             return
         }
-        loadStartAppAds()
-
         mInterstitial = InterstitialAd(this)
         mInterstitial?.adUnitId = ADMOB_FULL_SCREEN_ID
         val builder = AdRequest.Builder()
@@ -179,34 +171,6 @@ abstract class BaseActivity : AppCompatActivity() {
         }
     }
 
-    private fun loadStartAppAds() {
-        isFBAdLoaded = false
-        fbInterstitialAd = InterstitialAd(this, FB_FULL_SCREEN_ID)
-        fbInterstitialAd?.loadAd()
-
-        fbInterstitialAd?.buildLoadAdConfig()?.withAdListener(object : InterstitialAdListener {
-            override fun onInterstitialDisplayed(ad: Ad) {
-            }
-
-            override fun onInterstitialDismissed(ad: Ad) {
-            }
-
-            override fun onError(ad: Ad?, adError: AdError) {
-                isFBAdLoaded = false
-            }
-
-            override fun onAdLoaded(ad: Ad) {
-                isFBAdLoaded = true
-            }
-
-            override fun onAdClicked(ad: Ad) {
-            }
-
-            override fun onLoggingImpression(ad: Ad) {
-            }
-        })
-    }
-
 
     fun showAdIfLoad() {
         if (!BuildConfig.FREE_VERSION) {
@@ -220,9 +184,6 @@ abstract class BaseActivity : AppCompatActivity() {
             if (isGoogleAdLoaded) {
                 isGoogleAdLoaded = false
                 mInterstitial?.show()
-            } else if (isFBAdLoaded) {
-                isFBAdLoaded = false
-                fbInterstitialAd?.show()
             }
         } catch (e: Exception) {
 

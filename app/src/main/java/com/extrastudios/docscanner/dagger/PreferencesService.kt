@@ -10,7 +10,7 @@ class PreferencesService {
     var isVibrateEnable by booleanProperty(default = true)
     var isRatingDone by booleanProperty()
     var storageLocation by stringProperty(
-        default = Environment.getExternalStorageDirectory().toString()
+        default = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS).toString()
     )
     var confirmRemove by booleanProperty()
     var ratingTime by longProperty(default = System.currentTimeMillis())

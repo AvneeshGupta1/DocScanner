@@ -32,7 +32,7 @@ class PreviewActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mImagesArrayList = intent.getStringArrayListExtra(PREVIEW_IMAGES)
+        mImagesArrayList = intent.getStringArrayListExtra(PREVIEW_IMAGES)?:ArrayList()
         mPreviewAdapter = PreviewAdapter(this, mImagesArrayList)
         viewPager?.adapter = mPreviewAdapter
         viewPager?.setPageTransformer(true, DepthPageTransformer())
@@ -87,7 +87,7 @@ class PreviewActivity : BaseActivity() {
         if (resultCode != Activity.RESULT_OK || data == null) return
         if (requestCode == rearrangeImageCode) {
             try {
-                mImagesArrayList = data!!.getStringArrayListExtra(RESULT)
+                mImagesArrayList = data.getStringArrayListExtra(RESULT)?:ArrayList()
                 mPreviewAdapter!!.setData(mImagesArrayList)
                 viewPager!!.adapter = mPreviewAdapter
             } catch (e: Exception) {
